@@ -851,11 +851,81 @@ if(burger){
     burger.addEventListener('click', () => {
        headerMenu.classList.toggle('_active');
        burger.classList.toggle('_active');
-       document.body.classList.toggle('_lock');
+    //    document.body.classList.toggle('_lock');
     });
 };
 // @ @include("files/spoller.js",{});
-// @ @include("files/select.js",{});
-// @ @include("files/tabs.js",{});
+const selectSingle = document.querySelectorAll('.__select');
+const selectSingle_main = document.querySelectorAll('.__select__main');
+const selectSingle_title = document.querySelectorAll('.__select__title');
+    
+
+if(selectSingle){
+    selectSingle.forEach((element,index) => {
+            // Toggle menu
+            selectSingle_main[index].addEventListener('click', () => {
+               if ('active' === element.getAttribute('data-state')) {
+                  element.setAttribute('data-state', '');
+               } else {
+                  element.setAttribute('data-state', 'active');
+               }
+            }); 
+            let selectSingle_labels = element.querySelectorAll('.__select__label');
+            // Close when click to option
+            for (let i = 0; i < selectSingle_labels.length; i++) {
+            selectSingle_labels[i].addEventListener('click', (evt) => {
+                selectSingle_title[index].textContent = evt.target.textContent;
+                element.setAttribute('data-state', '');
+            });
+            }
+        });
+}
+   
+   
+
+    
+
+;
+ //  tabs
+let tabsParent = document.querySelectorAll('._tabs');
+if(tabsParent.length > 0){
+    tabsParent.forEach(element => {
+        let tabs = element.querySelectorAll('._tabs-item'),
+        tabsContent = element.querySelectorAll('._tab-block');
+
+        function hideTabsContent(){
+        tabsContent.forEach(item => {
+            item.classList.remove('_active');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('_active');
+        });
+        };
+
+        let showTabsContent = function (i = 0){
+            tabsContent[i].classList.add('_active');
+            tabs[i].classList.add('_active');
+        }
+
+        hideTabsContent();
+        showTabsContent(0);
+
+        element.addEventListener('click', (event) => {
+        const targetElement = event.target;
+        
+        if( targetElement && targetElement.classList.contains('_tabs-item') || targetElement && targetElement.closest('._tabs-item')){
+            hideTabsContent();
+            
+            tabs.forEach((item, i)=>{
+                if(targetElement.closest('._tabs-item') == item){
+                    showTabsContent(i);
+                }
+                });
+        }
+        });
+    });
+}
+ ;
 // @ @include("files/sliders.js",{});
     

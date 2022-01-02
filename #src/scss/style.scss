@@ -6,6 +6,7 @@
 @import "./base/zeroing";
 @import "./base/burger";
 @import "./base/popup";
+@import "./base/select";
 // @import "./base/burger";
 @import "./base/ui";
 // libs
@@ -13,6 +14,7 @@
 // blocks
 @import "./blocks/header";
 @import "./blocks/footer";
+@import "./blocks/hero";
 
 
 // global styles
@@ -41,6 +43,18 @@
 
 .page {
   flex: 1 1 auto;
+}
+
+::-webkit-scrollbar{
+	width: 16px;
+}
+::-webkit-scrollbar-thumb{
+	background: $blue;
+	border-radius: 8px;
+	border: 2px solid #fff;
+}
+::-webkit-scrollbar-track{
+	background: #fff;
 }
 
 body{
