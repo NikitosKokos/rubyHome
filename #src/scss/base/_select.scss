@@ -50,7 +50,17 @@
     color: #030A1B;
     font-weight: 500;
     font-size: 22px;
-    line-height: calc(33 / 22);
+    line-height: calc(25 / 22);
+
+    @media (max-width: $md1+px){
+       font-size: 20px;
+    }
+    @media (max-width: $md2+px){
+       font-size: 18px;
+    }
+    @media (max-width: $md3+px){
+       font-size: 24px;
+    }
   }
 
   .__select__content {

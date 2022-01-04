@@ -1,0 +1,30 @@
+.partners {
+
+		&__container {
+		}
+
+      .swiper-wrapper{
+      }
+
+      &__top{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         @include adaptiv-value('margin-bottom', 65, 20, 1);
+      }
+
+		&__title {
+         text-align: center;
+		}
+
+		&__body {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @include adaptiv-value('margin-bottom', 140, 60, 1);
+		}
+
+		&__item {
+         flex: 0 0;
+		}
+}

@@ -13,5 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
    const headerObserver = new IntersectionObserver(callback);
    headerObserver.observe(header);
 
+   // mobile slider
+   const mobSlider = document.querySelector('.partners__body');
+   let mobSliderSwiper;
+
+   const mobileSlider = () => {
+      if(window.innerWidth < 992 && mobSlider.dataset.mobile === 'false') {
+         mobSlider.classList.add('_swiper');
+         BuildSlider();
+
+         mobSliderSwiper = new Swiper(mobSlider, {
+            loop: true,
+            slidesPerView: 'auto',
+            speed: 800,
+            spaceBetween: 60,
+         });
+         
+         mobSlider.dataset.mobile = 'true';
+      }
+
+      if(window.innerWidth >= 992){
+         mobSlider.dataset.mobile = 'false';
+         mobSlider.classList.remove('_swiper');
+
+         if(mobSlider.classList.contains('swiper-container-inintialized')){
+            mobSliderSwiper.destroy();
+         }
+      }
+   }
+
+   mobileSlider();
+
+   window.addEventListener('resize', () => {
+      mobileSlider();
+   });
+
    
 }); // end

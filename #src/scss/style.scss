@@ -5,16 +5,17 @@
 @import "./base/icons"; 
 @import "./base/zeroing";
 @import "./base/burger";
-@import "./base/popup";
+// @import "./base/popup";
 @import "./base/select";
-// @import "./base/burger";
+@import "./base/burger";
 @import "./base/ui";
 // libs
-// @import "./libs/";
+@import "./libs/swiper-bundle.min";
 // blocks
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/hero";
+@import "./blocks/partners";
 
 
 // global styles

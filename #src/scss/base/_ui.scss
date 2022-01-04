@@ -48,3 +48,23 @@
 }
 
 // main
+
+.title{
+	font-weight: 600;
+	@include adaptiv-value('font-size', 44, 28, 1);
+	line-height: calc(66 / 44);
+	color: #030A1B;
+	position: relative;
+
+	 &:before{
+		content: '';
+		position: absolute;
+		top: -0.068em;
+		left: -0.15em;
+		height: 1.18em;
+		width: 0.90em;
+		background-size: contain !important;
+		background: url('../img/titleIcon.png') 0 0 no-repeat;
+		
+	}
+}
