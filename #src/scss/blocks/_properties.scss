@@ -1,0 +1,217 @@
+.properties {
+   @include adaptiv-value('margin-bottom', 140, 60, 1);
+
+		&__container {
+		}
+
+		&__top {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @include adaptiv-value('margin-bottom', 70, 30, 1);
+		}
+
+		&__title {
+         @include adaptiv-value('font-size', 44, 22, 1);
+         padding: 0px 10px 0px 0px;
+		}
+
+		&__btn {
+         font-weight: 600;
+         @include adaptiv-value('font-size', 16, 15, 1);
+         line-height: calc(24 / 16);
+         color: $orange;
+         position: relative;
+
+          &:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            height: 2px;
+            background: currentColor;
+            transition: all .3s ease-in-out;
+         }
+
+         @media(any-hover: hover){
+            &:hover{
+                &:before{
+                  width: 100%;
+               }
+            }
+         }
+		}
+
+		&__body {
+         display: grid;
+         gap: 30px;
+         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+         @media (max-width: $md4+px){
+            grid-template-columns: 1fr;
+         }
+		}
+
+		&__item {
+		}
+}
+
+.item-properties {
+   display: flex;
+   flex-direction: column;
+   background: #FFFFFF;
+   box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
+   border-radius: 10px;
+
+		&__img {
+         width: 100%;
+         height: 321px;
+         overflow: hidden;
+         border-radius: 10px 10px 0 0;
+
+         @media (max-width: $md4+px){
+            height: auto;
+            padding-bottom: 88.7%;
+         }
+
+         img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+		}
+
+		&__content {
+         padding: 30px;
+         display: flex;
+         flex-direction: column;
+         flex: 1 1 auto;
+
+         @media (max-width: $md4+px){
+            padding: 20px;
+         }
+		}
+
+		&__top {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+         flex: 1 1 auto;
+         padding: 0px 0px 10px 0px;
+		}
+
+		&__title {
+         font-weight: 600;
+         font-size: 22px;
+         line-height: calc(33 / 22);
+         color: #030A1B;
+         padding: 0px 10px 0px 0px;
+		}
+
+		&__heart {
+         color: #BBBBBB;
+         cursor: pointer;
+         transition: all .3s ease-in-out;
+         margin: 10px 0px 0px 0px;
+
+         &._active{
+            color: #E61E14;
+         }
+		}
+
+		&__location {
+         color: #4F545F;
+         display: flex;
+         align-items: center;
+         font-size: 16px;
+         line-height: calc(24 / 16);
+         margin: 0px 0px 20px 0px;
+
+          &:before{
+            font-size: 15px;
+            margin: 0px 10px 0px 0px;
+         }
+		}
+
+		&__data {
+         display: flex;
+         align-items: center;
+         margin: 0px 0px 20px 0px;
+		}
+
+		&__item {
+         color: #030A1B;
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         line-height: calc(24 / 16);
+
+         &:not(:last-child){
+           margin: 0px 20px 0px 0px;
+         }
+
+          &:before{
+            margin: 0px 5px 0px 0px;
+         }
+
+			&_bed {
+            font-size: 12px;
+            &:before{
+               color: #81848D;
+            }
+			}
+
+			&_cutlery {
+            font-size: 14px;
+            &:before{
+               color: #4F545F;
+            }
+			}
+
+			&_shower {
+            font-size: 14px;
+            &:before{
+               color: #4F545F;
+            }
+			}
+		}
+
+		&__bottom {
+         display: flex; 
+         align-items: center;
+         justify-content: space-between;
+		}
+
+		&__price {
+         font-weight: 600;
+         font-size: 22px;
+         line-height: calc(33 / 22);
+         color: $orange;
+
+         @media (max-width: $md4+px){
+            font-size: 20px;
+         }
+		}
+
+		&__btn {
+         height: 44px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 5px;
+         background: $blue;
+         font-weight: 500;
+         font-size: 16px;
+         line-height: calc(24 / 16);
+         color: #FFFFFF;
+         padding: 0 20px;
+         transition: all .3s ease-in-out;
+
+         @media(any-hover: hover){
+            &:hover{
+               background: darken($blue, 10%);
+            }
+         }
+		}
+}

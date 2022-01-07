@@ -1055,6 +1055,14 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileSlider();
    });
 
+   // heart
+   const hearts = document.querySelectorAll('.item-properties__heart');
+
+   hearts.forEach(heart => {
+      heart.addEventListener('click', () => {
+         heart.classList.toggle('_active');
+      });
+   });
    
 }); // end
     

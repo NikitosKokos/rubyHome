@@ -1590,6 +1590,248 @@ button.swiper-pagination-bullet {
           flex: 0 0;
 }
 
+.properties {
+  margin-bottom: 140px;
+}
+
+.properties__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.properties__title {
+  font-size: 44px;
+  padding: 0px 10px 0px 0px;
+}
+
+.properties__btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: #FE753F;
+  position: relative;
+}
+
+.properties__btn:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.properties__body {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.item-properties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+}
+
+.item-properties__img {
+  width: 100%;
+  height: 321px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.item-properties__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item-properties__content {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.item-properties__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0px 0px 10px 0px;
+}
+
+.item-properties__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(33 / 22);
+  color: #030A1B;
+  padding: 0px 10px 0px 0px;
+}
+
+.item-properties__heart {
+  color: #BBBBBB;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin: 10px 0px 0px 0px;
+}
+
+.item-properties__heart._active {
+  color: #E61E14;
+}
+
+.item-properties__location {
+  color: #4F545F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  margin: 0px 0px 20px 0px;
+}
+
+.item-properties__location:before {
+  font-size: 15px;
+  margin: 0px 10px 0px 0px;
+}
+
+.item-properties__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.item-properties__item {
+  color: #030A1B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: calc(24 / 16);
+}
+
+.item-properties__item:not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+
+.item-properties__item:before {
+  margin: 0px 5px 0px 0px;
+}
+
+.item-properties__item_bed {
+  font-size: 12px;
+}
+
+.item-properties__item_bed:before {
+  color: #81848D;
+}
+
+.item-properties__item_cutlery {
+  font-size: 14px;
+}
+
+.item-properties__item_cutlery:before {
+  color: #4F545F;
+}
+
+.item-properties__item_shower {
+  font-size: 14px;
+}
+
+.item-properties__item_shower:before {
+  color: #4F545F;
+}
+
+.item-properties__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.item-properties__price {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(33 / 22);
+  color: #FE753F;
+}
+
+.item-properties__btn {
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background: #2E6EFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: #FFFFFF;
+  padding: 0 20px;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 ._container {
   max-width: 1146px;
   margin: 0 auto;
@@ -1694,6 +1936,22 @@ body._lock {
 
   .partners__body {
     margin-bottom: calc(60px + 80 * ((100vw - 320px) / 826));
+  }
+
+  .properties {
+    margin-bottom: calc(60px + 80 * ((100vw - 320px) / 826));
+  }
+
+  .properties__top {
+    margin-bottom: calc(30px + 40 * ((100vw - 320px) / 826));
+  }
+
+  .properties__title {
+    font-size: calc(22px + 22 * ((100vw - 320px) / 826));
+  }
+
+  .properties__btn {
+    font-size: calc(15px + 1 * ((100vw - 320px) / 826));
   }
 }
 
@@ -1952,6 +2210,23 @@ body._lock {
     padding: 0 15px;
     font-size: 15px;
   }
+
+  .properties__body {
+    grid-template-columns: 1fr;
+  }
+
+  .item-properties__img {
+    height: auto;
+    padding-bottom: 88.7%;
+  }
+
+  .item-properties__content {
+    padding: 20px;
+  }
+
+  .item-properties__price {
+    font-size: 20px;
+  }
 }
 
 @media (any-hover: hover) {
@@ -1968,6 +2243,14 @@ body._lock {
   }
 
   .tabs-hero__btn:hover {
+    background: #004dfa;
+  }
+
+  .properties__btn:hover:before {
+    width: 100%;
+  }
+
+  .item-properties__btn:hover {
     background: #004dfa;
   }
 }
