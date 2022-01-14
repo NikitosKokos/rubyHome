@@ -70,6 +70,10 @@
 		&__left-side{
 			display: grid;
 			gap: 30px;
+
+			@media (max-width: $md2+px){
+				gap: 20px;
+			}
 			@media (min-width: 600px){
 				grid-column: 2 / 3;
 				grid-row: 1 / 6;

@@ -56,5 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
          heart.classList.toggle('_active');
       });
    });
+
+   // reviews
+   const reviewsSliderSwiper = new Swiper('.reviews__body', {
+      loop: true,
+      slidesPerView: 2,
+      speed: 800,
+      spaceBetween: 30,
+      pagination: {
+         el: document.querySelector('.reviews__bullets'),
+         type: 'bullets',
+         clickable: true,
+      },
+      breakpoints: {
+         0: {
+            slidesPerView: 1,
+            autoHeight: true,
+         },
+         767.98: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            autoHeight: false,
+         },
+         991.98: {
+            spaceBetween: 30,
+         },
+      },
+   });
    
 }); // end
