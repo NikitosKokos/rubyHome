@@ -2057,6 +2057,127 @@ button.swiper-pagination-bullet {
   color: #4F545F;
 }
 
+.subscribe__body {
+  background: #433E89;
+  border-radius: 10px;
+  padding: 70px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.subscribe__body:after,
+.subscribe__body:before {
+  content: '';
+  width: 208px;
+  height: 208px;
+  position: absolute;
+  background: #FFFFFF;
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.subscribe__body:before {
+  top: 25px;
+  left: -150px;
+}
+
+.subscribe__body:after {
+  bottom: -135px;
+  right: 15px;
+}
+
+.subscribe__title {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 136%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.subscribe__descr {
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 635px;
+  margin-bottom: 70px;
+}
+
+.subscribe__form {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 7px 7px 0;
+  max-width: 743px;
+}
+
+.subscribe__input {
+  background: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: #030A1B;
+  padding: 0 30px;
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: #C0C1C6;
+}
+
+.subscribe__input::-moz-placeholder {
+  color: #C0C1C6;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #C0C1C6;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #C0C1C6;
+}
+
+.subscribe__input::placeholder {
+  color: #C0C1C6;
+}
+
+.subscribe__btn {
+  background: #2E6EFF;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: #FFFFFF;
+  padding: 0 40px;
+  height: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 ._container {
   max-width: 1146px;
   margin: 0 auto;
@@ -2160,6 +2281,10 @@ body._lock {
     font-size: 15px;
   }
 
+  .subscribe__body:after {
+    bottom: -150px;
+  }
+
   ._container {
     max-width: 970px;
   }
@@ -2249,6 +2374,22 @@ body._lock {
 
   .reviews__subtitle {
     margin-bottom: calc(0px + 10 * ((100vw - 320px) / 826));
+  }
+
+  .subscribe__title {
+    font-size: calc(30px + 14 * ((100vw - 320px) / 826));
+  }
+
+  .subscribe__title {
+    margin-bottom: calc(5px + 10 * ((100vw - 320px) / 826));
+  }
+
+  .subscribe__descr {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 826));
+  }
+
+  .subscribe__descr {
+    margin-bottom: calc(40px + 30 * ((100vw - 320px) / 826));
   }
 }
 
@@ -2602,6 +2743,10 @@ body._lock {
     font-size: 16px;
   }
 
+  .subscribe__body:after {
+    right: 10px;
+  }
+
   ._container {
     max-width: none;
     padding: 0 10px;
@@ -2716,6 +2861,37 @@ body._lock {
   .item-reviews__descr {
     font-size: 14px;
   }
+
+  .subscribe__body {
+    padding: 70px 10px;
+  }
+
+  .subscribe__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0px 7px 7px 7px;
+    height: auto;
+  }
+
+  .subscribe__input {
+    width: 100%;
+    padding: 0 13px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
+
+  .subscribe__btn {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
 }
 
 @media (any-hover: hover) {
@@ -2740,6 +2916,10 @@ body._lock {
   }
 
   .item-properties__btn:hover {
+    background: #004dfa;
+  }
+
+  .subscribe__btn:hover {
     background: #004dfa;
   }
 }
