@@ -1350,6 +1350,109 @@ button.swiper-pagination-bullet {
   transition: all .3s ease-in-out;
 }
 
+.footer {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__main {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 260px;
+          flex: 0 0 260px;
+}
+
+.footer__logo {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer__descr {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4F545F;
+  margin-bottom: 25px;
+}
+
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #FE753F;
+  color: #fff;
+  font-size: 12px;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.footer__icon:not(:last-child) {
+  margin: 0px 15px 0px 0px;
+}
+
+.footer__icon._icon-yt {
+  font-size: 10px;
+}
+
+.footer__icon._icon-tw {
+  font-size: 14px;
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(33 / 22);
+  color: #030A1B;
+  margin-bottom: 25px;
+}
+
+.footer__list li:not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+
+.footer__link {
+  font-size: 16px;
+  color: #4F545F;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 .hero {
   min-height: 100vh;
   display: -webkit-box;
@@ -2221,6 +2324,10 @@ body._lock {
 }
 
 @media (min-width: 600px) {
+  .footer__descr {
+    max-width: 260px;
+  }
+
   .featured__left-side {
     grid-column: 2 / 3;
     grid-row: 1 / 6;
@@ -2298,6 +2405,26 @@ body._lock {
   .header__logo {
     -ms-flex-preferred-size: calc(120px + 130 * ((100vw - 320px) / 826));
         flex-basis: calc(120px + 130 * ((100vw - 320px) / 826));
+  }
+
+  .footer {
+    margin-top: calc(100px + 40 * ((100vw - 320px) / 826));
+  }
+
+  .footer {
+    margin-bottom: calc(100px + 40 * ((100vw - 320px) / 826));
+  }
+
+  .footer__logo {
+    margin-bottom: calc(15px + 10 * ((100vw - 320px) / 826));
+  }
+
+  .footer__descr {
+    margin-bottom: calc(15px + 10 * ((100vw - 320px) / 826));
+  }
+
+  .footer__title {
+    margin-bottom: calc(15px + 10 * ((100vw - 320px) / 826));
   }
 
   .hero__body {
@@ -2405,6 +2532,28 @@ body._lock {
 
   .menu__body li {
     margin: 0px 25px 0px 0px;
+  }
+
+  .footer__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .footer__main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 0 10px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .footer__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 0 10px;
+    margin: 0px 0px 30px 0px;
   }
 
   .hero__body {
@@ -2764,6 +2913,24 @@ body._lock {
 }
 
 @media (max-width: 600px) {
+  .footer__body {
+    margin: 0;
+  }
+
+  .footer__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .footer__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 0;
+  }
+
   .featured__body {
     gap: 30px;
     grid-template-columns: 1fr;
@@ -2900,6 +3067,14 @@ body._lock {
   }
 
   .menu__link:hover {
+    color: #FE753F;
+  }
+
+  .footer__icon:hover {
+    background: #fe510c;
+  }
+
+  .footer__link:hover {
     color: #FE753F;
   }
 

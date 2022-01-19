@@ -1,0 +1,137 @@
+.footer {
+   @include adaptiv-value('margin-top', 140, 100, 1);
+   @include adaptiv-value('margin-bottom', 140, 100, 1);
+
+      &__content{
+
+      }
+
+		&__body {
+         display: flex;
+         justify-content: space-between;
+
+         @media (max-width: $md2+px){
+            flex-wrap: wrap;
+            margin: 0 -10px;
+         }
+
+         @media (max-width: 600px){
+            margin: 0;
+         }
+		}
+
+		&__main {
+         flex: 0 0 260px;
+         @media (max-width: $md2+px){
+            flex: 0 0 50%;
+            padding: 0 10px;
+            margin: 0px 0px 30px 0px;
+         }
+
+         @media (max-width: 600px){
+            flex: 1 1 100%;
+            padding: 0;
+         }
+		}
+
+		&__logo {
+         display: block;
+         width: 220px;
+         height: auto;
+         @include adaptiv-value('margin-bottom', 25, 15, 1);
+
+         img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+         }
+		}
+
+		&__descr {
+         font-size: 16px;
+         line-height: 1.5;
+         color: #4F545F;
+         @include adaptiv-value('margin-bottom', 25, 15, 1);
+
+         @media (min-width: 600px){
+            max-width: 260px;
+         }
+		}
+
+		&__icons {
+         display: flex;
+         align-items: center;
+		}
+
+		&__icon {
+         width: 30px;
+         height: 30px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         background: $orange;
+         color: #fff;
+         font-size: 12px;
+         transition: all .3s ease-in-out;
+
+         &:not(:last-child){
+           margin: 0px 15px 0px 0px;
+         }
+
+         &._icon-yt{
+            font-size: 10px;
+         }
+
+         &._icon-tw{
+            font-size: 14px;
+         }
+
+         @media(any-hover: hover){
+            &:hover{
+               background: darken($orange, 10%);
+            }
+         }
+		}
+
+		&__item {
+         @media (max-width: $md2+px){
+            flex: 0 0 50%;
+            padding: 0 10px;
+            margin: 0px 0px 30px 0px;
+         }
+
+         @media (max-width: 600px){
+            flex: 1 1 100%;
+            padding: 0;
+         }
+		}
+
+		&__title {
+         font-weight: 600;
+         font-size: 22px;
+         line-height: calc(33 / 22);
+         color: #030A1B;
+         @include adaptiv-value('margin-bottom', 25, 15, 1);
+		}
+
+		&__list {
+         li{
+            &:not(:last-child){
+              margin: 0px 0px 15px 0px;
+            }
+         }
+		}
+
+		&__link {
+         font-size: 16px;
+         color: #4F545F;
+         transition: all .3s ease-in-out;
+
+         @media(any-hover: hover){
+            &:hover{
+               color: $orange;
+            }
+         }
+		}
+}
